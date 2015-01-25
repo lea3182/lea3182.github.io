@@ -1,0 +1,52 @@
+html {
+     margin:0px;
+     padding-left:150px;
+     background-color:#47D1D1;
+     font-family:papyrus;
+}
+
+.container {
+     width:880px;
+     height:880px;
+
+     padding:20px;
+     background-color:white;
+
+
+}
+
+.title {
+     width:760x;
+     height:20px;
+
+     text-align:center;
+     padding:50px;
+     font-size:46px;
+     background-color:#BABACE
+}
+
+.subtitle {
+    width:760x;
+    height:50px;
+
+    text-align:center;
+    padding-top:20px;
+    font-size:26px;
+    background-color:#BABACE;
+}
+
+.date {
+    width:760x;
+    height:30px;
+    text-align:right;
+    padding-top:10px;
+    padding-right:30px;
+}
+
+.content {
+    width:760px;
+    height:55%;
+
+    padding: 60px;
+    background-color:#BABACE;
+}
