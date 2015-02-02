@@ -1,0 +1,41 @@
+html { background-color: #d6d6d6;
+       font-family: verdana;
+}
+
+h2 { color: #960CE3;}
+
+.container {background-color:#9ce3da;
+            margin:50px;
+}
+
+.pair{
+      margin-top: 50px;
+      position: absolute;
+      height:250px;
+      width:400px;
+      margin-left:400px;
+      text-align:center;
+
+}
+
+.DBC {
+      display: inline-block;
+      margin-top:350px;
+      width:350px;
+      height:250px;
+      margin-left: 100px;
+      text-align: center;
+      margin-right: 100px;
+
+}
+
+.compare {
+      display: inline-block;
+      position: absolute;
+      width:450px;
+      margin-top: 350px;
+      padding-top: -10px;
+      margin-left: 80px;
+      height:250px;
+      text-align: center;
+}
