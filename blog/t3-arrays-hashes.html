@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leandra's Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/Users/leandrakim/Desktop/lea3182.github.io/stylesheets/blog-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/default.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="title">Technical Blog #3</div>
+    <div class="subtitle">Array vs. Hashes</div>
+    <div class="date">February 1, 2015</h4>
+  </div>
+  <div class="content">
+    <h3>What Are Arrays and Hashes?</h3>
+    <p>Essentially arrays and hashes are both indexed collections of objects such as integers, floats or strings or boolean values.
+  Arrays are ordered lists and each of the list items can be accessed by an integer index. One thing to note is that array indexes start as 0 rather than 1. Using an integer index offers more efficiency in access the array elements but hashes offer more flexibility.
+</p>
+<p>Example: There are a total of 4 elements in array<br>
+  <ul>
+  <li>array = [1, "two", 3.0, true] </li><br>
+  <li>array[0] = 1 </li>
+  <li>array[1] = "two"</li>
+  <li>array[2] = 3.0 </li>
+  <li>array[3] = true </li>
+</ul>
+  </p>
+<p>
+  Hashes is considered more of a collection of key/value pairs rather than just a list. The key can be of any object type and must be unique while the value can be duplicated. The order of elements is not as important as arrays since hashes enumerate their values in the order that the corresponding keys were inserted.
+  </p>
+  <p>Example:   The age hash holds the age of various people<br>
+    <ul>
+   <li>age = { "Matthew" => 10,</li>
+   <li>"Angie" => 6,</li>
+   <li>"Brian" => 6,</li>
+   <li>"Jasmine" => 9</li>
+     <li>  }</li><br>
+     <li>age["Angie"] = 6</li>
+     <li>age["Jasmine"] = 9</li>
+     <li>age["Matthew"] = 10</li>
+     <li>age["Brian"] = 6</li>
+   </ul><br>
+  </p>
+  <h3>Different Applications</h3>
+    <p>
+Arrays and hashes both store information and if the order of the elements are important then arrays may be the better option than hashes.
+Here I created an array called 'planets' to store a list of the planets in the solar system closest to the sun. The array will display the planets in the order the array was created.If I wanted to look up the 3rd planet from the sun I would look it up using index 2 since the index starts at 0.
+<ul>
+  <li>planets = [ "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn","Uranus", "Neptune"]</li><br>
+  <li>puts planets</li>
+  <li>Mercury</li>
+  <li>Venus</li>
+  <li>Earth</li>
+  <li>Mars</li>
+  <li>Jupiter</li>
+  <li>Saturn</li>
+  <li>Uranus</li>
+  <li>Neptune</li><br>
+  <li>puts planets[2]</li>
+  <li>Earth</li>
+</ul>
+</p>
+<p>
+Here I created a hash to keep track of my friends and family's birthdays. I would store their names as keys and their birthdays as the value. Since keys must be unique, modifications would be necessary for any duplicate names. Values do not have to be unique so it will not create a problem if more than one person have the same birthday. It is far easier to retieve a birth date using the person's name rather than trying to remember the index number for each person.<br>
+<ul>
+  <li>birthdays = { "Mom" => "March 21",</li>
+  <li>"Dad" => "March 19",</li>
+  <li>"Joe" => "June 10",</li>
+  <li>"Joe C." => "April 11", </li>
+  <li>"Carol" => "June 10"</li>
+  <li>}</li><br>
+  <li>birthdays["Joe"] = June 10</li>
+  <li>birthdays["Carol"] = June 10</li>
+</ul>
+    </p>
+    </div>
+  </div>
+  </body>
+
+</html>
