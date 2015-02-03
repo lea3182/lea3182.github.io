@@ -50,3 +50,12 @@ html {
     padding: 60px;
     background-color:#BABACE;
 }
+
+li {
+    list-style-type: none;
+    background-color: white;
+    padding: 5px;
+    margin-left:-40px;
+    font-weight: bold;
+
+}
