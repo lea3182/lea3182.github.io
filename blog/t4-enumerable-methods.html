@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leandra's Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/default.css">
+</head>
+<body>
+  <div class="container">
+
+    <div class="title">Technical Blog #3</div>
+    <div class="subtitle">#map vs #each</div>
+    <div class="date">February 9, 2015</h4>
+  </div>
+  <div class="content">
+    <h2>When to Use #map Method Over #each Method</h2>
+    <p>The #map method operates very much like #each method. They both cycle through an array one element at a time through a given block of code. The difference is that #map will return a new array containing the result of each element after it has gone through the block, while #each will return the original array even after going through the block. #map does not alter the size of the array or the order of elements but rather just stores the accumulated results of each elements iteration.
+    </p>
+    <p>Using #each will process each element in the array through the block but will return the original elements not the results.</p>
+    <div class="example">
+     array = [ 1, 2, 3 ]<br>
+     array.each {|x| puts x * 2 }   ====>  This will output 2 4 6 on the screen<br>
+     puts array                     ====>  but this will return 1 2 3 since #each does not
+                                          store the result of each element's iteration<br>
+    </div>
+    <p>Using #maps will allow the results to be stored in a new array.</p>
+     <div class="example">
+      array = [ 1, 2, 3 ]<br>
+      new_mapped_array = array.map {|x| x * 2 }<br>
+      puts new_mapped_array        ====> This will output 2 4 6<br>
+    </div>
+    </div>
+
+  </div>
+  </body>
+
+</html>

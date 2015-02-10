@@ -59,3 +59,8 @@ li {
     font-weight: bold;
 
 }
+
+.example {
+    background-color: white;
+    padding: 5px;
+}
