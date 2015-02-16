@@ -3,25 +3,52 @@
 <head>
   <title>Leandra's Blog</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/blog-stylesheet.css">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+
 </head>
 <body>
   <div class="container">
 
     <div class="title">Technical Blog #5</div>
-    <div class="subtitle">Inline vs Inline Block</div>
+    <div class="subtitle">Ruby Class</div>
     <div class="date">February 15, 2015</h4>
   </div>
   <div class="content">
+    <h3> Ruby Classes</h3>
     <p>
+      This week I wanted to explore more into Ruby Classes as they were a big part of this past week's curriculum. To understand classes or when and how to use them, one needs to understand what objects are in Ruby. If someone came up to you and asked you what an object was, you would probably respond by saying, "A visible or tangible thing", right? Yet I cannot physically pick up a Ruby object like I would a ball or box. So what is a Ruby object? An object is an instance of a class and objects have both state and behaviors. States are properties or attributes and behavior is what the object can do through the use of methods. Imagine you are a CEO of a company. Objects are your employees. You can assign objects task for them to perform. They can compute calculations and report back. You can also assign objects to work together with other objects. Classes are essentially the blue print for a set of objects, endowing them with a common structure and common behavior. 
     </p>
     <p>
+      I proudly drive a Prius now but I can't help miss the days I use to drive around in my M3! So I created a Car Class where all the objects created in the Car Class are given a set of properties through the use of instance variables. Instance variables always start with "@" symbol. I created 3 instance variables : @model, @top_speed and @drive_train. Each object created in the Car class can hold their individual values for those instance variables. I create a method #drive. The #drive method tells you more about an object in the car class.
+   </p>
+    <div class="example">
+    class Car<br>
+    def initialize (model, top_speed, drive_train)<br>
+        @model = model<br>
+        @top_speed = top_speed<br>
+        @drive_train = drive_train<br>
+    end<br><br>
+    
+    def drive<br>
+        puts "The #{@model} is a #{@drive_train} vehicle and can drive up to a top speed of #{@top_speed} mph "<br>
+    end<br><br>
+    
+end<br>
+</div>
+<p>Now we create 2 Car objects bmw and audi and enter in their model, top speed and drive train. All three are properties set my the Car Class to endow to each of its objects but each object may have different attributes. After creating the objects I invoke the # drive method to tell you more about itself.</p>
+<div class="example">
+bmw = Car.new("M3", 155, "rear wheel" )<br>
+audi = Car.new("S4", 155, "four wheel")<br>
+bmw.drive<br>
+audi.drive<br>
+</div>
 
-    </p>
-    </div>
+<p>Output: </p>
+<div class="example">
+==> "The M3 is a rear wheel vehicle and can drive up to a top speed of 155 mph"<br>
+==> "The S4 is a four wheel vehicle and can drive up to a top speed of 155 mph"
+</div>
 
-  </div>
   </body>
 
 </html>
