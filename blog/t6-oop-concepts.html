@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leandra's Blog</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+
+</head>
+<body>
+  <div class="container">
+
+    <div class="title">Technical Blog #5</div>
+    <div class="subtitle">Variable Scope</div>
+    <div class="date">February 22, 2015</h4>
+  </div>
+  <div class="content">
+    <h3>What is Variable Scope?</h3>
+    <p>Scope of a variable defines where in a program that variable is accessible. Think of scope as boundaries. Different kinds of variables have different boundaries. Imagine you are going to a music festival where you can purchase general admissions tickets or VIP tickets. VIP ticket holders can access special VIP restricted areas in addition to areas accessible by GA ticket holders. GA ticket holders will not be permitted into VIP since that area is beyond their accessible boundries.</p>
+    <p>There are 5 kinds of variables</p>
+
+    <div class="example">
+      Global<br>
+      Constant<br>
+      Local<br>
+      Instance<br>
+      Class<br>
+    </div>
+    <p>Variable types are declared using a special character before the variable name</p>
+    Global variables begin with the $ symbol<br>
+    Constant variables begin with capital letter<br>
+    Local variables begin with a lowercase letter or underscore<br>
+    Instance variables begin with one @ symbol<br>
+    Class variables begin with two @@ symbols<br>
+
+  <p>Local variables are only vaild and accessible within a "local" area of the source code. </p>
+<div class="example">
+Example:<br>
+x = 5<br><br>
+def check<br>
+   x = 10<br>
+end<br>
+</div>
+<p>
+Here we see a local variable named x and it holds the number 5.
+Below is a method named check and it contains a variable also named x, which holds the number 10.
+The x variable that holds the number 10 is not overriding the x variable that holds the number 5  because x = 10 only exists within the check method and not outside where x = 5 lives.<br><br>
+
+If we ran
+</p>
+x = 5<br><br>
+def check<br>
+   x = 10<br>
+end<br><br>
+puts x<br>
+</div>
+<p>
+The result:
+</p>
+<div class="example">
+5
+</div>
+<p>Global variables are are on the other end of the specturm from local variable. Global variables are accessible anywhere in the program regardless of where they are declared. They have VIP passes. However, using global variables are strongly discouraged despite how their lack of restrictions may seem appealing. Being visible anywhere also means they can be changed from anywhere. This can create many programming issues and tracking bugs in the code difficult.<br><br>
+
+Contant variables that are declared within a class or a module are available to use anywhere within in that class or module. If they are declared outside of a class or module they have a global scope. Constants are designed to hold a value that does not change. The value remains constant. Note: In Ruby you can change a constant variable but the interpreter will give you a warning.<br><br>
+
+Class variables is a variable that holds a value that is SHARED amongst all instances(objects) of that class. If one instance changes the value of the variable, it will also change the value held by other instance objects with that class variable. Think of it this way, imagine you have a classroom (class) with 10 students (instance objects) sitting inside. The teacher(instance object) gives every student in her classroom the same homework assignment(class variable) and all 10 students write down the homework assignment in their notebooks. The teacher realizes that she assigned the wrong homework problems and tells the students the correct assignment. The changes the teacher made to the homework was shared to every student in her classroom. <br><br>
+
+Instance variables are similar to Class variables except the values are local to a specific instance and not shared amongst other instance objects. Imagine a class that has an instance variable named @test, if one instance object of that class changes the value of @test, the changes only apply locally, it does not affect the value of @test held by other object instances of that class. Lets think back to the classroom with the 10 students. The students (instant objects) in the classroom (class) recieves a grade (instance variable) at the end of the school year. Unlike the homework assignments, the students will not share the same exact grade. A change of grade for one student will not affect the grade of any other student.<br><br>
+
+Now that we know the differnces, let me illustrate an example for when to use a class and when to use an instance variable. I created a program that records the year, model and date a car was sold in an imaginary dealership. It also gives you a running total of how total cars sold to date.<br><br></p>
+<div class="example">
+    class dealership<br>
+    @@num_cars_sold = 0<br>
+    def initialize(model, year, sales_date)<br>
+        @model = model<br>
+        @year = year<br>
+        @sales_date = sales_date<br>
+    end<br><br>
+
+    def sale_recorder<br>
+      @@num_cars_sold += 1<br>
+      puts "Model sold: #{@year} #{@model}"<br>
+      puts "Sales date: #{@sales_date}"<br>
+      puts "Total cars sold to date: #{@@num_cars_sold}\n\n"<br><br>
+
+    end<br>
+end<br><br>
+
+car1 = dealership.new( "Prius", "2015", "12/20/14")<br>
+car2 = dealership.new( "Accord", "2015", "1/12/15")<br>
+car3 = dealership.new( "A3", "2014", "2/18/15")<br><br>
+
+car1.sale_recorder<br>
+car2.sale_recorder<br>
+car3.sale_recorder<br>
+</div>
+<p>Output:</p>
+<div class="example">
+Model sold: 2015 Prius<br>
+Sales date: 12/20/14<br>
+Total cars sold to date: 1<br><br>
+
+Model sold: 2015 Accord<br>
+Sales date: 1/12/15<br>
+Total cars sold to date: 2<br>
+
+Model sold: 2014 A3<br>
+Sales date: 2/18/15<br>
+Total cars sold to date: 3<br>
+</div>
+<p>I created 3 instance variables @model, @year and @sales_date because each car(class instance/object) in the dealership (class) will have it's own value for model, year manufactured and date sold. I created a class variable named @@num_cars_sold and set it's value to zero. The sales_recorder method increments the class variable @@num_cars_sold by 1 for evey car sales entered. So when car1 was entered, the @@num_cars_sold was changed from 0 to 1. car2 will reflect @@num_cars_sold's change made by car1 and increments it by 1 again, changing the value from 1 to 2. Since @@num_car_sold is a shared value and all changes are shared, each new car sales entries will show a cumulative value instead of a unique one.</p>
+
+</div>
+  </body>
+
+</html>
