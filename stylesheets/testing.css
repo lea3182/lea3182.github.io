@@ -1,0 +1,47 @@
+body {
+  background: url(http://www.sanfrancisco.travel/sites/sftraveldev.prod.acquia-sites.com/files/SanFrancisco_0.jpg);
+  margin: 30px;
+}
+
+#name {
+  line-height: .7em;
+  text-align: center;
+  color: white;
+  padding: 20px
+}
+
+#main {
+
+  height: 500px;
+}
+
+.menu {
+}
+
+.home, .about, .blog, .projects {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 9%;
+  margin-left: 9%;
+}
+
+#cultural {
+  margin-left: 350px;
+  display: inline-block;
+  padding: 20px;
+
+}
+
+#tech {
+  margin-left: 90px;
+  display: inline-block;
+  padding: 20px;
+}
+
+a:link {
+
+}
+
+a:hover{
+  color: black;
+}
